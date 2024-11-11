@@ -46,7 +46,7 @@
 .container .profile {
 	 width: 100%; /* Make the image fill the container */
   height: 100%; /* Ensure it scales proportionally to the container */
-  object-fit: cover; /* Ensures the image fills the container without stretching */  
+    
 }
 
 .container img {
