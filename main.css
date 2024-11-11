@@ -249,16 +249,27 @@ nav#mainNav a.active:after {
 }
 
 .team {
-	margin-bottom:60px;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 400px; /* Set a fixed height for consistency */
 }
 
 
 .team img{
-	margin-bottom:20px;
+	  width: 100%;
+  height: 200px; /* Uniform height */
+  object-fit: cover; /* Ensures images fill the space without stretching */
+  border-radius: 8px;
 }
 
 .team h2{
-	text-align:center;
+	font-size: 1.2em;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .team h2 span{
@@ -268,12 +279,18 @@ nav#mainNav a.active:after {
 
 
 .tSocials{
-	margin-top:20px;
-	font-size:15px;
-	border-top:2px solid #efefef;
-	border-bottom:2px solid #efefef;
-	display:inline-block;
-	padding:8px 30px;
+	  margin-top: auto; /* Ensures button aligns to bottom of container */
+}
+
+.regButton {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .tSocials li{
