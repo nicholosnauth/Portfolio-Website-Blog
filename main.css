@@ -255,6 +255,7 @@ nav#mainNav a.active:after {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+object-fit: cover;
   box-sizing: border-box;
   height: 400px; /* Set a fixed height for consistency */
 }
