@@ -41,8 +41,7 @@
   overflow: hidden; /* Ensure the image doesn't spill out of the container */
   margin: 10px auto; /* Center the profile image horizontally with some margin */
   display: flex;
-  justify-content: center;
-  align-items: center; /* Ensure the image is centered */
+ 
 }
 .container .profile {
 	 width: 100%; /* Make the image fill the container */
