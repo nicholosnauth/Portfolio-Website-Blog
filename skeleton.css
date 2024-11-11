@@ -28,6 +28,23 @@
 
 
     .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; object-fit: cover; }
+    .container .image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    overflow: hidden;
+}
+
+.container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops the image to fill container */
+    display: block;
+}
+
     .container .column,
 	.columns, 
     .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
