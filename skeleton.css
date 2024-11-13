@@ -34,7 +34,7 @@
     padding-bottom: 75%; /* 4:3 aspect ratio */
     overflow: hidden;
 }
-.container .profile {
+.container .profile .img {
 	  width: 90px; /* Set the width to resemble wallet size (about 3.5 inches) */
   height: 60px; /* Set the height to resemble wallet size (about 2.5 inches) */
   border-radius: 50%; /* Make the image round, or adjust for square corners */
