@@ -36,7 +36,7 @@
 }
 .container .profile {
 	  width: 90px; /* Set the width to resemble wallet size (about 3.5 inches) */
-  height: 60px; /* Set the height to resemble wallet size (about 2.5 inches) */
+  height: 150px; /* Set the height to resemble wallet size (about 2.5 inches) */
   
   overflow: hidden; /* Ensure the image doesn't spill out of the container */
   margin: 10px auto; /* Center the profile image horizontally with some margin */
