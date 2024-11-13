@@ -687,12 +687,12 @@ form.respondF {
   height: 150px; /* Set the height to resemble wallet size (about 2.5 inches) */
   
   overflow: hidden; /* Ensure the image doesn't spill out of the container */
-  display: block;
+  display: flex;
 	align-items: center;
  
 }
 
-.container .profile img{
+.container .profile-img{
   width: 100%; /* Image takes full container width */
     height: 100%; /* Image takes full container height */
     object-fit: cover;
