@@ -263,7 +263,6 @@ nav#mainNav a.active:after {
 
 .team img{
 	 
-  object-fit: cover; /* Ensures images fill the space without stretching */
   border-radius: 8px;
 }
 
