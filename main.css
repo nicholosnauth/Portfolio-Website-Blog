@@ -693,9 +693,9 @@ form.respondF {
 }
 
 .container .profile-img{
-  width: 100%; /* Image takes full container width */
+  width: 150px; /* Image takes full container width */
     height: 100%; /* Image takes full container height */
-    object-fit: cover;
+   margin: 20ox;
  
 }
 
