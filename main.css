@@ -682,6 +682,23 @@ form.respondF {
     border: 1px solid #da4856 !important;
 }
 
+.container .profile {
+	  width: 90px; /* Set the width to resemble wallet size (about 3.5 inches) */
+  height: 150px; /* Set the height to resemble wallet size (about 2.5 inches) */
+  justify-content: flex-end;
+  overflow: hidden; /* Ensure the image doesn't spill out of the container */
+  display: flex;
+	align-items: center;
+ 
+}
+
+.container .profile img{
+  width: 100%; /* Image takes full container width */
+    height: 100%; /* Image takes full container height */
+    object-fit: cover;
+ 
+}
+
 /*End contact*/
 
 
