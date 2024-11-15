@@ -692,6 +692,11 @@ form.respondF {
  
 }
 
+.profile-right {
+    display: flex;
+    justify-content: flex-end; /* Aligns the content (image) to the right */
+}
+
 .container .profile-img{
   width: 100%; /* Image takes full container width */
     height: 100%; /* Image takes full container height */
