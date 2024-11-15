@@ -688,13 +688,12 @@ form.respondF {
   
   overflow: hidden; /* Ensure the image doesn't spill out of the container */
   display: flex;
-	align-items: center;
- 
+	
 }
 
 .profile-right {
     display: flex;
-    justify-content: flex-end; /* Aligns the content (image) to the right */
+    justify-content: center; /* Aligns the content (image) to the right */
 }
 
 .container .profile-img{
