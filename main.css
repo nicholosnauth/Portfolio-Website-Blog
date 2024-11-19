@@ -576,44 +576,51 @@ nav#mainNav a.active:after {
 /*End portfolio*/
 
 /*Download Resume*/
- .resume-section {
+  .resume-section {
             text-align: center;
             padding: 60px 20px;
             background-color: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin: 40px auto;
             max-width: 600px;
-            border-radius: 8px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
         }
         .resume-section h2 {
             font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #222;
             margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         .resume-section p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #666;
             margin-bottom: 30px;
             line-height: 1.6;
         }
         .download-btn {
             display: inline-block;
-            background-color: #007BFF;
+            background: linear-gradient(135deg, #6e7e7e, #a3b4b2); /* subtle gradient */
             color: white;
-            padding: 15px 30px;
-            font-size: 1.1rem;
+            padding: 18px 40px;
+            font-size: 1.2rem;
             text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* soft shadow */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease, transform 0.2s ease;
         }
         .download-btn:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, #5f6e6e, #8b9c9a); /* slightly darker on hover */
+            transform: translateY(-4px); /* subtle lift effect */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* enhanced shadow */
         }
         .download-btn:active {
-            background-color: #004085;
-            transform: translateY(0);
+            background: linear-gradient(135deg, #4e5f5f, #788a89); /* even darker on click */
+            transform: translateY(2px); /* button presses down */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* softens shadow on click */
         }
 
 /*Resume Section End*/
