@@ -77,6 +77,41 @@
 <article class="container">
   <div id="post-body">
   <p>I'm starting to get invested into the applications for robotics, machine learning, and languages used for programming robotic projects. The first thing I'm trying to figure out is what language I should start with and probably will look into using either ROS or python.</p>
+
+<article>
+<h1>Building a Paint Color and Brand Detection Robot</h1>
+<p><em>Posted August 4, 2026</em></p>
+
+<p>I've been sketching out a project I'm calling the paint detection robot: a small device that can scan a painted surface, identify its color, match it against real paint brand databases (Sherwin Williams, Behr, Benjamin Moore), and eventually even analyze texture. Here's where my thinking stands so far.</p>
+
+<h2>The sensing approach</h2>
+
+<p>For reading color, I'm planning to use a TCS34725 color sensor. It reads RGB plus a clear light channel over I2C, needs very little processing power, and pairs naturally with an ESP32. It works well on flat, matte to satin painted surfaces.</p>
+
+<p>Two things matter a lot for accuracy. Ambient light has to be controlled, so the sensor needs its own shroud and onboard LED rather than relying on room lighting. Surface finish also matters: glossy paint causes glare that throws off readings unless the sensor angle is controlled.</p>
+
+<p>Texture is a separate problem entirely. The TCS34725 can't tell the difference between eggshell, flat, and textured finishes. That requires a camera and image analysis, looking at contrast and surface roughness through something like edge detection. That's the real fork in the road for this project: color alone fits comfortably on an ESP32, but texture pushes toward a camera module and more computing power.</p>
+
+<h2>Matching colors to real paint brands</h2>
+
+<p>Public paint brand palettes exist as collections of named colors with sRGB or LAB values. There are community scraped datasets and brand color visualizer APIs that expose this data.</p>
+
+<p>The matching approach: convert the sensor's RGB reading into LAB color space, since LAB tracks human and paint industry perception much better than raw RGB. Then find the nearest neighbor using Delta E distance.</p>
+
+<p>Realistic expectations here matter. This approach reliably narrows a reading down to the right color family, and often the right shade. Pinpointing one exact brand and code with full certainty is unreliable, since many brands have nearly identical colors and cheap sensors have enough drift that you're really picking the closest plausible match rather than a guaranteed one. This is genuinely how existing consumer paint matching tools and handheld color scanners work, so it's a legitimate approach even without perfect precision.</p>
+
+<h2>Cost and complexity</h2>
+
+<p>An ESP32 plus a TCS34725 plus a small onboard LED shroud costs roughly $15 to $25 in parts and is a reasonable weekend build. Adding brand database matching just means the ESP32 either holds a compact local table of the most common colors, or queries a small server or Raspberry Pi over WiFi for lookups.</p>
+
+<p>Adding real texture detection is the bigger jump. It means adding a camera module and either running lightweight image analysis directly on something like an ESP32 CAM, which is limited and slow, or offloading images to a Raspberry Pi or phone to do the actual computer vision work.</p>
+
+<h2>Where I'm landing</h2>
+
+<p>Color only detection with brand matching is very buildable on a plain ESP32. If texture ends up mattering as much as color for this project, I'll need at least an ESP32 CAM or a Raspberry Pi in the loop to handle the image side.</p>
+
+<p>Next step is putting together the concrete parts list and starter code, starting with the color only ESP32 version before deciding whether to scope in a camera for texture.</p>
+</article>
   </div>
 
   <div class="post-nav">
